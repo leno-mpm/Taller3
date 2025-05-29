@@ -1,11 +1,9 @@
-public class LogIn {
-    public void log (User user) {
-        System.out.println("Has access to the website");
-        insertUserInDatabase(user);
-        // Logic
-    }
-    public void insertUserInDatabase(User user){
-        // Insert user in database
-    }
-}
+public interface LogIn {
+    public void log (User user);
 
+}
+// Principio de Sustitución de Liskov (LSP):
+// Antes, la clase AppWeb dependía directamente de LogInUser y LogInAdmin.
+// Al utilizar la interfaz LogIn, AppWeb puede depender de una abstracción
+// y tratar a cualquier implementación (usuario normal, administrador, etc.)
+// de forma uniforme, sin romper el comportamiento esperado del sistema.
