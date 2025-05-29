@@ -1,8 +1,8 @@
 public class LoginUser implements LogIn {
+    private UserRepository userR;
     @Override
     public void log(User user) {
-        // bla bla bla 
+        System.out.println("Has access to the website");
+        userR.insertUserInDatabase(user);
     }
-
-    
 }
