@@ -1,4 +1,4 @@
-public class LogInAdmin extends LogIn {
+public class LogInAdmin implements LogIn {
     private boolean userIsAdmin;
     @Override
     public void log (User user) {
